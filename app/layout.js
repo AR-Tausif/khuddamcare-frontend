@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <AsideBar >{children}</AsideBar>
-        <section className="lg:ml-14 md:ml-14">{children}
+        <section className="lg:ml-12 md:ml-12">{children}
         </section>
       </body>
     </html>

@@ -5,8 +5,8 @@ const AsideBar = () => {
     
 <div className="relative">
 
-<div className="flex lg:block md:block hidden text-gray-900">
-  <aside className="flex h-screen w-15 flex-col items-center border-r fixed border-gray-200 bg-white">
+<div className="flex lg:block md:block hidden text-gray-900 w-12">
+  <aside className="flex h-screen w-12 flex-col items-center border-r fixed border-gray-200 bg-white">
     <div className="flex h-[2.9rem] w-full items-center justify-center border-b border-gray-200 p-2">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThsapwuIZ2JPUVRaWSoX_xoEIOHWxneY7EupS8gsFriA&s" className="w-10" />
     </div>
