@@ -1,7 +1,10 @@
-import Image from "next/image";
+
 
 export default function Home() {
   return (
-    <main>Initial Setup a NEXT.js Project--</main>
+    <div>
+      <h1>Initial Setup a NEXT.js Project</h1>
+      <h1>Initial Setup a NEXT.js Project</h1>
+    </div>
   );
 }
