@@ -11,7 +11,7 @@ const AsideBar = () => {
 <div className="flex lg:block md:block hidden text-gray-900 w-12">
   <aside className="flex h-screen w-12 flex-col items-center border-r fixed border-gray-200 bg-white">
     <div className="flex h-[2.9rem] w-full items-center justify-center border-b border-gray-200 p-2">
-      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThsapwuIZ2JPUVRaWSoX_xoEIOHWxneY7EupS8gsFriA&s" className="w-10" alt="Logo Image" />
+      <Image src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThsapwuIZ2JPUVRaWSoX_xoEIOHWxneY7EupS8gsFriA&s" width={10} height={10} className="w-10" alt="Logo Image" />
     </div>
     <nav className="flex flex-1 flex-col gap-y-4 pt-10">
       <Link href="/create-donor" className="group relative rounded-xl bg-gray-100 p-2 text-blue-600 hover:bg-gray-50">
@@ -66,7 +66,7 @@ const AsideBar = () => {
       </button>
 
       <button className="mt-2 rounded-full bg-gray-100">
-        <Image className="h-10 w-10 rounded-full" src="https://avatars.githubusercontent.com/u/35387401?v=4" alt="avatar image" />
+        <Image className="h-10 w-10 rounded-full" src="https://avatars.githubusercontent.com/u/35387401?v=4" alt="avatar image" width={10} height={10} />
       </button>
     </div>
   </aside>

@@ -98,7 +98,7 @@ export function CreateDonorForm() {
                             name="fatherName"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Father's Name</FormLabel>
+                                    <FormLabel>{"Father's Name"}</FormLabel>
                                     <FormControl>
                                         <Input placeholder="Type father's name" {...field} />
                                     </FormControl>
@@ -111,7 +111,7 @@ export function CreateDonorForm() {
                             name="motherName"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Mother's Name</FormLabel>
+                                    <FormLabel>{"Mother's Name"}</FormLabel>
                                     <FormControl>
                                         <Input placeholder="Type mother's name" {...field} />
                                     </FormControl>
@@ -150,14 +150,14 @@ export function CreateDonorForm() {
                                             </SelectTrigger>
                                         </FormControl>
                                         <SelectContent>
-                                            <SelectItem value="A+">{"positive (A+)"}</SelectItem>
-                                            <SelectItem value="A-">{"negative (A&minus;)"}</SelectItem>
-                                            <SelectItem value="B+">{"positive (B+)"}</SelectItem>
-                                            <SelectItem value="B-">{"negative (B&minus;)"}</SelectItem>
-                                            <SelectItem value="AB+">{"positive (AB+)"}</SelectItem>
-                                            <SelectItem value="AB-">{"negative (AB&minus;)"}</SelectItem>
-                                            <SelectItem value="O+">{"positive (O+)"}</SelectItem>
-                                            <SelectItem value="O-">{"negative (O&minus;)"}</SelectItem>
+                                            <SelectItem value="A&plus">{"positive (A&plus)"}</SelectItem>
+                                            <SelectItem value="A&minus">{"negative (A&minus;)"}</SelectItem>
+                                            <SelectItem value="B&plus">{"positive (B&plus)"}</SelectItem>
+                                            <SelectItem value="B&minus">{"negative (B&minus;)"}</SelectItem>
+                                            <SelectItem value="AB&plus">{"positive (AB&plus)"}</SelectItem>
+                                            <SelectItem value="AB&minus">{"negative (AB&minus;)"}</SelectItem>
+                                            <SelectItem value="O&plus">{"positive (O&plus)"}</SelectItem>
+                                            <SelectItem value="O&minus">{"negative (O&minus;)"}</SelectItem>
 
 
                                         </SelectContent>
