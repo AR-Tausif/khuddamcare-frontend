@@ -68,9 +68,9 @@ export function CreateDonorForm() {
 
     })
 
-    async function  onSubmit(data) {
-    
-       console.log(data)
+    async function onSubmit(data) {
+
+        console.log(data)
         return await createDonor(data)
     }
 
@@ -151,14 +151,15 @@ export function CreateDonorForm() {
                                         </FormControl>
                                         <SelectContent>
                                             <SelectItem value="A+">{"positive (A+)"}</SelectItem>
-                                            <SelectItem value="A-">{"negative (A-)"}</SelectItem>
+                                            <SelectItem value="A-">{"negative (A&minus;)"}</SelectItem>
                                             <SelectItem value="B+">{"positive (B+)"}</SelectItem>
-                                            <SelectItem value="B-">{"negative (B-)"}</SelectItem>
+                                            <SelectItem value="B-">{"negative (B&minus;)"}</SelectItem>
                                             <SelectItem value="AB+">{"positive (AB+)"}</SelectItem>
-                                            <SelectItem value="AB-">{"negative (AB-)"}</SelectItem>
+                                            <SelectItem value="AB-">{"negative (AB&minus;)"}</SelectItem>
                                             <SelectItem value="O+">{"positive (O+)"}</SelectItem>
-                                            <SelectItem value="O-">{"negative (O-)"}</SelectItem>
-                                            
+                                            <SelectItem value="O-">{"negative (O&minus;)"}</SelectItem>
+
+
                                         </SelectContent>
                                     </Select>
                                     <FormMessage />
@@ -250,19 +251,19 @@ export function CreateDonorForm() {
                             )}
                         />
                     </div>
-                        <FormField
-                            control={form.control}
-                            name="address"
-                            render={({ field }) => (
-                                <FormItem>
-                                    <FormLabel>Address</FormLabel>
-                                    <FormControl>
+                    <FormField
+                        control={form.control}
+                        name="address"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Address</FormLabel>
+                                <FormControl>
                                     <Textarea placeholder="Type your address here." {...field} />
-                                    </FormControl>
-                                    <FormMessage />
-                                </FormItem>
-                            )}
-                        />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
 
                     <Button type="submit">Submit</Button>
                 </form>
