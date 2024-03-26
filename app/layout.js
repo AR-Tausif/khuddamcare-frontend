@@ -26,12 +26,12 @@ export default function RootLayout({ children }) {
           <main className="bg-[#e7e3ff] min-h-screen">
 
             <span className="text-[#ff790e] text-[#34a853] md:text-[#1bdb8a] sm:text-[#a5aa85]" />
-            <div className="px-20 py-10">
+            <div className="lg:px-20 lg:py-10 md:px-17 md:py-7 sm: p-6">
               <div className="flex justify-between items-center">
                 <div>
                   <PathCrumb />
                   <h4 className="text-2xl mt-2 font-semibold">
-                    <span className="text-[#ff790e] font-bold">MKA-BD<span /></span> Blood Donours.
+                    <span className="text-[#ff790e] font-bold">Khedmot-E-Khalk Bangladesh<span /></span> Blood Donors.
                   </h4>
                 </div>
                 <div className="space-x-3">

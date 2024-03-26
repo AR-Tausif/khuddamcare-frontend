@@ -17,6 +17,8 @@ import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
 import UserDetailsBox from './userDetailsBox'
 import { getUsersFromServer } from '@/lib/utils'
 import axios from 'axios'
+import { getAllDonor } from '@/lib/db.query'
+import DateCustomizingFromISOTime from './dateCustomizingFromISOTime'
 
 const data = [
   {
@@ -124,32 +126,22 @@ const UsersTable = () => {
   const [donors, setDonors] = useState([]);
   const [error, setError] = useState(true)
 
-  useEffect(() => {
-    const fetchDonors = async () => {
-      try {
-        const response = await axios.get('http://localhost:4000/api/v1/donors');
-        setDonors(response.data.data);
-        setError(false)
-      } catch (error) {
-        setError(true)
-        console.error('Error fetching donors:', error);
-      }
-    };
-
-    fetchDonors();
-  }, []);
+  useEffect(()=>{
+    getAllDonor(setDonors)
+  },[])
+ 
   
-console.log(donors.length)
+console.log(donors, "sss")
   return (
     <Table>
-      <TableCaption>A list of your recent invoices.</TableCaption>
+      <TableCaption>A list of your all blood donors.</TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead className="" >Name & Phone</TableHead>
           <TableHead>Status</TableHead>
-          <TableHead>Blood Group</TableHead>
+          <TableHead className="text-[#ff790e]">Blood Group</TableHead>
           <TableHead >Majlish</TableHead>
-          <TableHead className="text-right">Last Donate</TableHead>
+          <TableHead className="">Last Donate</TableHead>
         </TableRow>
       </TableHeader>
       <TableBody className="">
@@ -172,16 +164,16 @@ console.log(donors.length)
                   <span className='text-[0.87rem]'>{donor.age}</span>
              
               </TableCell>
-              <TableCell className="">{donor.majlish}</TableCell>
-              <TableCell className="">{donor.bloodGroup}</TableCell>
+              <TableCell className="font-semibold text-[#ff790e]">{donor.bloodGroup}</TableCell>
+              <TableCell className="">{donor.majlish.name}</TableCell>
               
-              <TableCell className="flex flex-row-reverse">
+              <TableCell className="flex ">
                 <SheetTrigger className="rounded-full">
                   
                   <Button>
                   <CircleChevronRight size={18} />
-                  <span className='ml-3'>{donor.lastDate.date}</span>
                   </Button>
+                  <DateCustomizingFromISOTime date={donor.lastDate.date} />
                   
                 </SheetTrigger>
               </TableCell>
