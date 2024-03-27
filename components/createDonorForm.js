@@ -75,11 +75,11 @@ export function CreateDonorForm() {
     }
 
     return (
-        <>
+        <div className="">
 
             <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
-                    <div className="lg:flex lg:gap-6 lg:items-center">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
+                    <div className="lg:flex justify-around lg:items-center space-y-3">
                         <FormField
                             control={form.control}
                             name="name"
@@ -87,7 +87,7 @@ export function CreateDonorForm() {
                                 <FormItem>
                                     <FormLabel>Name</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Type name" {...field} />
+                                        <Input placeholder="Type name" {...field} className="lg:w-[25vw] md:w-[25vw]" />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -100,7 +100,7 @@ export function CreateDonorForm() {
                                 <FormItem>
                                     <FormLabel>{"Father's Name"}</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Type father's name" {...field} />
+                                        <Input placeholder="Type father's name" {...field}  className="lg:w-[25vw] md:w-[25vw]"/>
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -113,7 +113,7 @@ export function CreateDonorForm() {
                                 <FormItem>
                                     <FormLabel>{"Mother's Name"}</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Type mother's name" {...field} />
+                                        <Input placeholder="Type mother's name" {...field} className="lg:w-[25vw] md:w-[25vw]" />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -122,7 +122,7 @@ export function CreateDonorForm() {
 
                     </div>
 
-                    <div className="lg:flex lg:gap-6 lg:items-center">
+                    <div className="lg:flex justify-around lg:items-center space-y-3">
                         <FormField
                             control={form.control}
                             name="age"
@@ -130,7 +130,7 @@ export function CreateDonorForm() {
                                 <FormItem>
                                     <FormLabel>Age</FormLabel>
                                     <FormControl>
-                                        <Input type="number" placeholder="Enter your age" {...field} />
+                                        <Input type="number" placeholder="Enter your age" {...field}  className="lg:w-[25vw] md:w-[25vw]" />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -139,9 +139,9 @@ export function CreateDonorForm() {
                         <FormField
                             control={form.control}
                             name="bloodType"
-                            className="w-96"
+                            className="w-[30rem]"
                             render={({ field }) => (
-                                <FormItem className="w-52">
+                                <FormItem className="lg:w-[25vw] md:w-[25vw]">
                                     <FormLabel>Blood Group</FormLabel>
                                     <Select onValueChange={field.onChange}  {...field}>
                                         <FormControl>
@@ -150,14 +150,14 @@ export function CreateDonorForm() {
                                             </SelectTrigger>
                                         </FormControl>
                                         <SelectContent>
-                                            <SelectItem value="A&plus">{"positive (A&plus)"}</SelectItem>
-                                            <SelectItem value="A&minus">{"negative (A&minus;)"}</SelectItem>
-                                            <SelectItem value="B&plus">{"positive (B&plus)"}</SelectItem>
-                                            <SelectItem value="B&minus">{"negative (B&minus;)"}</SelectItem>
-                                            <SelectItem value="AB&plus">{"positive (AB&plus)"}</SelectItem>
-                                            <SelectItem value="AB&minus">{"negative (AB&minus;)"}</SelectItem>
-                                            <SelectItem value="O&plus">{"positive (O&plus)"}</SelectItem>
-                                            <SelectItem value="O&minus">{"negative (O&minus;)"}</SelectItem>
+                                            <SelectItem value="A+">{"positive (A+)"}</SelectItem>
+                                            <SelectItem value="A-">{"negative (A-)"}</SelectItem>
+                                            <SelectItem value="B+">{"positive (B+)"}</SelectItem>
+                                            <SelectItem value="B-">{"negative (B-)"}</SelectItem>
+                                            <SelectItem value="AB+">{"positive (AB+)"}</SelectItem>
+                                            <SelectItem value="AB-">{"negative (AB-)"}</SelectItem>
+                                            <SelectItem value="O+">{"positive (O+)"}</SelectItem>
+                                            <SelectItem value="O-">{"negative (O-)"}</SelectItem>
 
 
                                         </SelectContent>
@@ -179,7 +179,7 @@ export function CreateDonorForm() {
                                                 <Button
                                                     variant={"outline"}
                                                     className={cn(
-                                                        "w-[240px] pl-3 text-left font-normal",
+                                                        "w-[240px] lg:w-[25vw] md:w-[25vw] pl-3 text-left font-normal",
                                                         !field.value && "text-muted-foreground"
                                                     )}
                                                 >
@@ -210,7 +210,7 @@ export function CreateDonorForm() {
                         />
 
                     </div>
-                    <div className="lg:flex lg:gap-6 lg:items-center">
+                    <div className="lg:flex justify-around lg:items-center space-y-3">
                         <FormField
                             control={form.control}
                             name="majlish.name"
@@ -218,7 +218,7 @@ export function CreateDonorForm() {
                                 <FormItem>
                                     <FormLabel>Majlish</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Enter your majlish name" {...field} />
+                                        <Input placeholder="Enter your majlish name" {...field}  className="lg:w-[25vw] md:w-[25vw]" />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -231,7 +231,7 @@ export function CreateDonorForm() {
                                 <FormItem>
                                     <FormLabel>Halka</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Enter your halka name" {...field} />
+                                        <Input placeholder="Enter your halka name" {...field}  className="lg:w-[25vw] md:w-[25vw]" />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -244,7 +244,7 @@ export function CreateDonorForm() {
                                 <FormItem>
                                     <FormLabel>Mobile Number</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Enter your mobile number..." {...field} />
+                                        <Input placeholder="Enter your mobile number..." {...field} className="lg:w-[25vw] md:w-[25vw]" />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -268,6 +268,6 @@ export function CreateDonorForm() {
                     <Button type="submit">Submit</Button>
                 </form>
             </Form>
-        </>
+        </div>
     )
 }
